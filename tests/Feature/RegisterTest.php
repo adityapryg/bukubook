@@ -9,6 +9,7 @@ use Tests\TestCase;
 
 class RegisterTest extends TestCase
 {
+
     /**
      * A basic feature test example.
      */
@@ -22,6 +23,8 @@ class RegisterTest extends TestCase
 
     public function test_new_user_can_register()
     {
+        //truncate/hapus data di tabel user
+
         //register user
         $response = $this->post('/register', [
             'name' => 'Aditya Prayoga',
