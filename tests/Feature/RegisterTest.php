@@ -24,7 +24,7 @@ class RegisterTest extends TestCase
     public function test_new_user_can_register()
     {
         //truncate/hapus data di tabel user
-
+        //asd
         //register user
         $response = $this->post('/register', [
             'name' => 'Aditya Prayoga',
