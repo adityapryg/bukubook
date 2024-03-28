@@ -37,6 +37,10 @@ jobs:
           touch database/database.sqlite
       - name: Migrate
         run: php artisan migrate --seed
+      - name: Install Front-end
+        run: |
+          npm install
+          npm run dev
       - name: Feature Test
         env:
           DB_CONNECTION: sqlite
