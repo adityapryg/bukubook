@@ -1,9 +1,9 @@
 includes:
-    - ./vendor/nunomaduro/larastan/extension.neon
+    - ./vendor/larastan/larastan/extension.neon
 parameters:
     paths:
         - app
-    level: 1
+    level: 5
     ignoreErrors:
     excludePaths:
     checkGenericClassInNonGenericObjectType: false
