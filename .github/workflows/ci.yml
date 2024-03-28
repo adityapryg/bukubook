@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: setup php
         uses: shivammathur/setup-php@v2
         with:
@@ -15,14 +16,14 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysql, pdo_mysql_ bcmath, soap, intl, gd, exif, iconv
           coverage: none
 
-        - name: Run composer install
-          run: composer install -n --prefer-dist
+      - name: Run composer install
+        run: composer install -n --prefer-dist
 
-        - name: Prepare Laravel Application
-          run: |
-            cp .env.example .env
-            php artisan key:generate
+      - name: Prepare Laravel Application
+        run: |
+          cp .env.example .env
+          php artisan key:generate
 
-        - name: Run PHPStan
-          run: ./vendor/bin/phpstan --error-format=github
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan --error-format=github
 
