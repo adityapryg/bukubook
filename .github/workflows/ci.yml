@@ -1,24 +1,22 @@
-name: Run Tests
+name: Static Analysis
 
 on: [push]
 
 jobs:
-  tests:
-    name: Run Tests
+  phpstan:
+    name: phpstan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: setup php
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysql, pdo_mysql_ bcmath, soap, intl, gd, exif, iconv
           coverage: none
 
-      - name: Run composer install
+      - name: Install composer dependencies
         run: composer install -n --prefer-dist
 
-      - name: Run PHPStan
+      - name: Run Static Analysis
         run: ./vendor/bin/phpstan --error-format=github
-
