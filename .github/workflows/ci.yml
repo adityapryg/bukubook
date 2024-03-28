@@ -42,7 +42,4 @@ jobs:
           npm install
           npm run build
       - name: Feature Test
-        env:
-          DB_CONNECTION: sqlite
-          DB_DATABASE: database/database.sqlite
         run: php artisan test
