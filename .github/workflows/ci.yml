@@ -1,4 +1,4 @@
-name: Static Analysis
+name: Bukubook Test
 
 on: [push]
 
@@ -6,6 +6,15 @@ jobs:
   phpstan:
     name: phpstan
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: bukubook
+        ports:
+          - 3306:3306
+
     steps:
       - uses: actions/checkout@v2
 
@@ -19,7 +28,7 @@ jobs:
       - name: Run Static Analysis
         run: ./vendor/bin/phpstan --error-format=github
       - name: Create env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
       - name: Generate env key
         run: php artisan key:generate
       - name: Create Database
