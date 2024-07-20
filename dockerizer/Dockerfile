@@ -30,3 +30,6 @@ RUN php artisan storage:link
 
 # Set permissions if necessary
 RUN chown -R application:application /app/storage /app/bootstrap/cache
+
+# Seed database
+RUN php artisan migrate:fresh --seed
