@@ -28,7 +28,7 @@ COPY . .
 RUN npm install && npm run build
 
 # Run Laravel artisan commands
-RUN php artisan migrate:fresh --seed
+RUN php artisan migrate:fresh --seed --force
 
 # Set permissions if necessary
 RUN chown -R application:application /app/storage /app/bootstrap/cache
