@@ -39,26 +39,28 @@
                 </div>
 
                 <div class="mt-16">
-                   <div class="shadow-md rounded-lg p-6">
-                        <h2 class="text-center mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel CRUD Demo Project</h1>
-                        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">This project demonstrates CRUD operations using Laravel with a case study of book management. The project includes the following features:</p>
-                        <ul class="list-disc list-inside mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                            <li class="mb-2"><strong>CRUD for Categories:</strong> Manage book categories with create, read, update, and delete operations.</li>
-                            <li class="mb-2"><strong>CRUD for Books:</strong> Manage books with create, read, update, and delete operations.</li>
-                            <li class="mb-2"><strong>CRUD for Users:</strong> Manage users with create, read, update, and delete operations.</li>
-                        </ul>
-                        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">The project also includes two roles:</p>
-                        <ul class="list-disc list-inside mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                            <li class="mb-2"><strong>Admin:</strong> Has full access to all CRUD operations and can manage users and categories.</li>
-                            <li class="mb-2"><strong>User:</strong> Limited access to manage users.</li>
-                        </ul>
-                        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Default users for testing:</p>
-                        <ul class="list-disc list-inside mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                            <li class="mb-2"><strong>Admin:</strong> Email: admin@bukubook.com, Password: 4dm1n</li>
-                            <li class="mb-2"><strong>User:</strong> Email: user@bukubook.com, Password: us3r</li>
-                        </ul>
-                        <div class="mt-6">
-                            <a href="/home" class="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600">Explore the Project</a>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h1 class="text-3xl font-bold mb-4">Laravel CRUD Demo Project</h1>
+                            <p class="mb-4">This project demonstrates CRUD operations using Laravel with a case study of book management. The project includes the following features:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><strong>CRUD for Categories:</strong> Manage book categories with create, read, update, and delete operations.</li>
+                                <li class="mb-2"><strong>CRUD for Books:</strong> Manage books with create, read, update, and delete operations.</li>
+                                <li class="mb-2"><strong>CRUD for Users:</strong> Manage users with create, read, update, and delete operations.</li>
+                            </ul>
+                            <p class="mb-4">The project also includes two roles:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><strong>Admin:</strong> Has full access to all CRUD operations and can manage users and categories.</li>
+                                <li class="mb-2"><strong>User:</strong> Cannot view and manage users.</li>
+                            </ul>
+                            <p class="mb-4">Default users for testing:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><strong>Admin:</strong> Email: admin@bukubook.com, Password: 4dm1n</li>
+                                <li class="mb-2"><strong>User:</strong> Email: user@bukubook.com, Password: us3r</li>
+                            </ul>
+                            <div class="mt-6">
+                                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600">Explore the Project</a>
+                            </div>
                         </div>
                     </div>
                 </div>
